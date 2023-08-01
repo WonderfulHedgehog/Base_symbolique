@@ -1,0 +1,217 @@
+/* PARTIE I : paramètres "statiques" de la page */
+
+/* I - Les différentes parties composant la page */
+
+/* A. Définition de l'entête */
+.header {
+  background-color: rgb(185, 70, 37);
+  padding: 20px;
+  text-align: center;
+}
+
+/* B. Définition du corps du texte */
+body {
+  background-color: rgba(247, 225, 182, 0.7);
+  font-family: Garamond, Georgia, "Times New Roman";
+  margin: 25px 50px 75px 100px;
+  border-style: double;
+}
+
+/* C. Les paragraphes */
+p {
+  font-size: 20px;
+  color: brown;
+  margin-left:60px;
+  text-indent: 60px;
+  line-height: 1.8;
+  text-align: justify;
+  margin-right:60px;
+}  
+
+/* D. Le pied de page */
+.footer {
+  background-color: rgba(185, 70, 37, 0.9);
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-family: Garamond, Georgia, "Times New Roman";
+  
+}
+
+/* II - Les titres */
+
+/* A. Le titre de la page : le nom de l'auteur concerné */
+h1 {
+    font-size: 56px;
+    letter-spacing: 3px;
+    font-variant-caps: small-caps;
+    color: rgba(180,78,60,0.8);
+}
+
+/* B. La couleur de tous les autres titres */
+h2, h3, h4 {
+  color:  rgba(185,70,37,0.8);
+}
+
+/* C. Paramètres de détail spécifiques à chaque titre */
+
+h2 {
+    font-size: 40px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h3, h4 {
+  text-align: left;
+  margin-left: 60px;
+}
+
+h3 {
+  font-size: 32px;
+  font-style: italic;
+}
+
+h4 {
+  font-size: 28px;
+  margin-left:80px;
+}
+
+ 
+#Biblio1, #Biblio2 {
+   font-size: 20px;
+   list-style-type: square;
+   text-align: left;
+   color: brown;
+   margin-left:60px;
+   padding:0pt;
+   line-height: 1.8;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(233, 150, 122,0.7);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+p.double {border-style: double;}
+
+
+.image-border {
+    border: 30px solid;
+    border-image-source: url("https://mdn.github.io/css-examples/tools/border-image-generator/border-image-4.png");
+    border-image-slice: 13 13 13 13;
+    border-image-outset: 13px 13px 13px 13px;
+    border-image-repeat: repeat repeat;
+
+}
+
+/* PARTIE II : les éléments "qui répondent" (responsive) */
+
+/* I - La barre de menu */
+
+#Menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(185, 70, 37, .8);
+  box-shadow: 0 0 15px 0 rgba(0,0,0,.10);
+  text-align:center;
+  
+}
+
+/* Réglages sur le texte présent dans la barre de menu. */
+li {
+  text-align:center;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+/* Réaction du "bouton" quand on passe la souris au-dessus : changement de couleur */
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: rgba(185, 70, 37, 1);
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Liens présents dans le menu, mais cachés tant qu'on ne passe pas la souris dessus*/
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Réaction des liens quand on passe la souris au-dessus */
+.dropdown-content a:hover {
+background-color: rgba(185, 70, 37, 0.3);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* II - La bande de navigation en bas de page */
+
+div.gallery {
+margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+  background-color: rgba(255,235,205,0.8);
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+  color: brown;
+}
+
+div.gallery img {
+  width: 150px;
+  height: 150px;
+}
+
+div.desc {
+  padding: 20px;
+  text-align: center;
+}
