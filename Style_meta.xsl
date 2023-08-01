@@ -22,11 +22,12 @@
         </html>
     </xsl:template>
     
-    <!-- Je ne copie pas le contenu de teiHeader -->
+    <!-- Le contenu du Tei-Header n'est pas copié. -->
     
     <xsl:template match="teiHeader"/>
     
-    <!-- Je copie-colle le contenu de div -->
+    <!-- Le contenu de div2 est copié.  -->
+    <!-- Les balises div2 contiennent chacune un chapitre du texte. On leur donne trois attributs : type, subtype et n. Ainsi, pour le chapitre 1 : <div2 type="textpart" subtype="chapter" n="1"> -->
     
     <xsl:template match="div2">
         <div2>
@@ -34,21 +35,23 @@
         </div2>
     </xsl:template>
     
-    <!-- Je traduis le titre principal (XML "head", attribut = "main") en balise HTML <h1>.  -->
+    <!-- Traduction du titre principal (XML "head", attribut = "main") en balise HTML <h1>.  -->
+    <!-- Le titre principal correspond au nom de l'oeuvre encodé, dans son titre latin.  -->
     <xsl:template match="head[@type='main']">
         <h1>
             <xsl:apply-templates/>
         </h1>
     </xsl:template>
     
-    <!-- Je traduis le titre secondaire (XML "head", attribut = "sub") en balise HTML <h2>. -->
+    <!-- Traduction du titre secondaire (XML "head", attribut = "sub") en balise HTML <h2>. -->
+    <!-- Le titre secondaire est invariable : "Encodage des images littéraires". -->
     <xsl:template match="head[@type='sub']">
         <h2>
             <xsl:apply-templates/>
         </h2>
     </xsl:template>
     
-    <!-- Je traduis p en p avec un break après le contenu. -->
+    <!-- Traduction de p en p avec un break après le contenu. -->
     <xsl:template match="p">
         <p>
             <xsl:apply-templates/>
